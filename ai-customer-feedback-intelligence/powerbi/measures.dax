@@ -1,0 +1,20 @@
+Total Reviews = COUNTROWS('gold_ai_feedback_enriched')
+
+Average Rating = AVERAGE('gold_ai_feedback_enriched'[rating])
+
+Positive Sentiment % =
+DIVIDE(
+    CALCULATE([Total Reviews], 'gold_ai_feedback_enriched'[ai_sentiment] = "Positive"),
+    [Total Reviews],
+    0
+)
+
+Negative Reviews =
+CALCULATE([Total Reviews], 'gold_ai_feedback_enriched'[ai_sentiment] = "Negative")
+
+Baseline-AI Agreement % =
+DIVIDE(
+    CALCULATE([Total Reviews], 'gold_ai_feedback_enriched'[prediction_match] = TRUE()),
+    [Total Reviews],
+    0
+)

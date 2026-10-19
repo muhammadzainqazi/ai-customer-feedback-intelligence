@@ -1,0 +1,4 @@
+# Fabric runtime already provides pyspark and delta.
+# Installed inside the notebook with %pip:
+transformers
+torch
