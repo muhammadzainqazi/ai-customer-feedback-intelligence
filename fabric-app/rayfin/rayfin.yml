@@ -1,0 +1,43 @@
+id: app-1
+name: App_1
+version: 1.0.0
+services:
+  auth:
+    enabled: true
+    fabric:
+      enabled: true
+      externalEntraExchange: true
+    password:
+      enabled: false
+    allowedRedirectUris:
+      - http://localhost:5173
+      - http://localhost:5174
+      - http://127.0.0.1:5174
+      - https://lucky-cloud-2822c0f86b-swedencentral.webapp.fabricapps.net
+  data:
+    enabled: false
+    path: packages/data
+    buildCommand: npm run build
+  staticHosting:
+    enabled: true
+    path: packages/frontend
+    folder: dist
+    buildCommand: npm run build:fabric
+    indexDocument: index.html
+    assetAccess: protected
+    embedded:
+      only: false
+  storage:
+    enabled: false
+  functions:
+    enabled: false
+connectors:
+  - name: customeranalytics
+    type: fabric-sqlanalytics
+    config:
+      workspaceId: 37e0b634-7113-4444-82bf-fa34d82c5812
+      itemId: 69c29508-242c-4d71-9927-ae11ed18f293
+    auth:
+      type: application
+    operations:
+      - name: read

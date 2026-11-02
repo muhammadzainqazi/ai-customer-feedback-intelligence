@@ -1,0 +1,1201 @@
+{
+  "source": "customeranalytics",
+  "connector": "fabric-sqlanalytics",
+  "connectionString": "cr7bi7jqgwkeliwlrebmx5cgxq-gs3oanytofcejav77i2nqlcyci.datawarehouse.fabric.microsoft.com",
+  "discoveredAt": "2026-11-02T10:01:43.986Z",
+  "schemas": [
+    {
+      "schemaName": "dbo",
+      "tables": [
+        {
+          "tableName": "bronze_customer_feedback",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_text",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "product_category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "rating",
+              "dataType": "int",
+              "isNullable": true,
+              "precision": 10,
+              "scale": 0
+            },
+            {
+              "columnName": "review_date",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "source_system",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ingested_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            }
+          ]
+        },
+        {
+          "tableName": "bronzecustomerfeedback_benchmark",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_text",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "product_category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "rating",
+              "dataType": "int",
+              "isNullable": true,
+              "precision": 10,
+              "scale": 0
+            },
+            {
+              "columnName": "review_date",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "source_system",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            }
+          ]
+        },
+        {
+          "tableName": "gold_ai_feedback_enriched",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_text",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "product_category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "rating",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "review_date",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "source_system",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "baseline_sentiment",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "feedback_theme",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ai_sentiment",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "sentiment_confidence",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "model_name",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "processed_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            },
+            {
+              "columnName": "prediction_match",
+              "dataType": "bit",
+              "isNullable": true
+            }
+          ]
+        },
+        {
+          "tableName": "gold_ai_feedback_enriched_incremental",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_text",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "product_category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "rating",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "review_date",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "source_system",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "baseline_sentiment",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "feedback_theme",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ai_sentiment",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "sentiment_confidence",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "model_name",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "processed_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            },
+            {
+              "columnName": "prediction_match",
+              "dataType": "bit",
+              "isNullable": true
+            }
+          ]
+        },
+        {
+          "tableName": "gold_ai_feedback_enriched_rebuilt",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_text",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "product_category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "rating",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "review_date",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "source_system",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "baseline_sentiment",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "feedback_theme",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ai_sentiment",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "sentiment_confidence",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "model_name",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "processed_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            },
+            {
+              "columnName": "prediction_match",
+              "dataType": "bit",
+              "isNullable": true
+            }
+          ]
+        },
+        {
+          "tableName": "gold_ai_feedback_enriched_v2",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_text",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "product_category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "rating",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "review_date",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "source_system",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "baseline_sentiment",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "feedback_theme",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ai_sentiment",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "sentiment_confidence",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "model_name",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "processed_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            },
+            {
+              "columnName": "prediction_match",
+              "dataType": "bit",
+              "isNullable": true
+            }
+          ]
+        },
+        {
+          "tableName": "gold_ai_sentiment",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_text",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ai_sentiment",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "sentiment_confidence",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "model_name",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "processed_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            }
+          ]
+        },
+        {
+          "tableName": "gold_ai_sentiment_cache_v1",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_hash",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ai_sentiment",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "sentiment_confidence",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "model_name",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "processed_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            }
+          ]
+        },
+        {
+          "tableName": "gold_ai_sentiment_incremental_test_cache",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_hash",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ai_sentiment",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "sentiment_confidence",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "model_name",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "processed_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            }
+          ]
+        },
+        {
+          "tableName": "gold_ai_sentiment_recovery_test_cache_v1",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_hash",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ai_sentiment",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "sentiment_confidence",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "model_name",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "processed_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            }
+          ]
+        },
+        {
+          "tableName": "gold_category_metrics",
+          "columns": [
+            {
+              "columnName": "product_category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "total_reviews",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "average_rating",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "low_rating_reviews",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "high_rating_reviews",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "low_rating_pct",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            }
+          ]
+        },
+        {
+          "tableName": "gold_customer_feedback_enriched",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_text",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "product_category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "rating",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "review_date",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "source_system",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ingested_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            },
+            {
+              "columnName": "sentiment",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "feedback_theme",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "enrichment_method",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "enrichment_status",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            }
+          ]
+        },
+        {
+          "tableName": "gold_customer_feedback_enriched_v2",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_text",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "product_category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "rating",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "review_date",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "source_system",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ingested_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            },
+            {
+              "columnName": "sentiment",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "enrichment_method",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "enrichment_status",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            }
+          ]
+        },
+        {
+          "tableName": "gold_daily_trends",
+          "columns": [
+            {
+              "columnName": "review_date",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "total_reviews",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "average_rating",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "low_rating_reviews",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            }
+          ]
+        },
+        {
+          "tableName": "gold_feedback_overview",
+          "columns": [
+            {
+              "columnName": "total_reviews",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "average_rating",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "low_rating_reviews",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "high_rating_reviews",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "low_rating_pct",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "high_rating_pct",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            }
+          ]
+        },
+        {
+          "tableName": "gold_sentiment_forecast",
+          "columns": [
+            {
+              "columnName": "week_start",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "forecast_horizon",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "forecast_negative_review_rate_pct",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "model_name",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "training_start_week",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "training_end_week",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "holdout_mae_pct_points",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "baseline_mae_pct_points",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "generated_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            }
+          ]
+        },
+        {
+          "tableName": "gold_source_metrics",
+          "columns": [
+            {
+              "columnName": "source_system",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "total_reviews",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "average_rating",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "low_rating_reviews",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            }
+          ]
+        },
+        {
+          "tableName": "gold_weekly_sentiment_metrics",
+          "columns": [
+            {
+              "columnName": "week_start",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "product_category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "total_reviews",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "negative_reviews",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "positive_reviews",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "negative_review_rate",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "negative_review_rate_pct",
+              "dataType": "float",
+              "isNullable": true,
+              "precision": 53
+            },
+            {
+              "columnName": "generated_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            }
+          ]
+        },
+        {
+          "tableName": "quarantine_customer_feedback",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_text",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "product_category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "rating",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "review_date",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "source_system",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ingested_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            },
+            {
+              "columnName": "quality_errors",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            }
+          ]
+        },
+        {
+          "tableName": "silver_customer_feedback",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_text",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "product_category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "rating",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "review_date",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "source_system",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ingested_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            }
+          ]
+        },
+        {
+          "tableName": "silver_customer_feedback_incremental_test",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_text",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "product_category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "rating",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "review_date",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "source_system",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ingested_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            }
+          ]
+        },
+        {
+          "tableName": "silver_customer_feedback_recovery_test_v1",
+          "columns": [
+            {
+              "columnName": "record_id",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "review_text",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "product_category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "rating",
+              "dataType": "bigint",
+              "isNullable": true,
+              "precision": 19,
+              "scale": 0
+            },
+            {
+              "columnName": "review_date",
+              "dataType": "date",
+              "isNullable": true,
+              "datePrecision": 0
+            },
+            {
+              "columnName": "source_system",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "ingested_at",
+              "dataType": "datetime2",
+              "isNullable": true,
+              "datePrecision": 6
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

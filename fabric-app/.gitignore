@@ -1,0 +1,80 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules
+
+# Build output
+dist
+*.tsbuildinfo
+.vite
+coverage
+
+# Written by the plugin's legacy `connect semantic model` flow. Apps built from
+# this template reach a model through a connector and never generate it, but the
+# plugin can still write it into an app that used that flow.
+packages/frontend/src/fabric.generated.ts
+
+# Local function host settings may contain developer-only secrets
+packages/functions/local.settings.json
+
+# Generated deployment and environment state
+.env.local
+rayfin/.env
+rayfin/.env.secrets
+rayfin/.deployments.json
+packages/functions/deploymentdata.json
+
+# Added by Rayfin CLI
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+dist-ssr
+*.local
+rayfin/.env*
+rayfin/.*.tmp
+rayfin/.temp/
+rayfin.config.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# Dependencies and builds
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+local.settings.json
+
+# Generated Rayfin and local project files
+.agents/
+.mcp.json
+rayfin/.lockfile.json
+rayfin/.project.json
+
+# Temporary SQL verification files
+sentiment_counts.sql
+total_reviews.sql
+total_reviews.sqlnpx
+
+# Local logs and editor files
+*.log
+.DS_Store
+# Generated Rayfin template tooling
+scripts/
+AGENTS.md
+rayfin-template.yml
